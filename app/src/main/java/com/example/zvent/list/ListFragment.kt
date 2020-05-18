@@ -28,7 +28,7 @@ class ListFragment : Fragment() {
     private lateinit var binding: ListFragmentBinding
 
     private lateinit var invitadosUser: InvitadosUser
-    private  var invitadosIndex: Int= -1
+    private  var invitadosIndex: Int= 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

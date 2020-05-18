@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 
 import com.example.zvent.R
 import com.example.zvent.data.InvitadosUser
@@ -47,7 +48,7 @@ class ResultsFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModelFactory = ResultsViewModelFactory(invitadosUser.invitados)
-        viewModel = ViewModelProviders.of(this).get(ResultsViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(ResultsViewModel::class.java)
 
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
